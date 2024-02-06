@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@android:drawable/ic_menu_camera"/>
+
+        <EditText
+            android:id="@+id/edtxt_hero_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/hero_image"
+            android:layout_alignTop="@+id/hero_image"
+            android:layout_marginStart="8dp"
+            android:hint="Superhero name"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtxt_alter_ego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/hero_image"
+            android:layout_alignBottom="@+id/hero_image"
+            android:layout_marginStart="8dp"
+            android:hint="Alter ego"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/view_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_below="@+id/hero_image"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/txt_bio_hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_bar"
+            android:layout_marginTop="24dp"
+            android:text="Bio"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edtxt_bio_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_bio_hero"
+            android:layout_marginTop="16dp"
+            android:hint="Short bio"/>
+
+        <TextView
+            android:id="@+id/txt_power_hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxt_bio_description"
+            android:layout_marginTop="24dp"
+            android:text="Power"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_power_hero"
+            android:numStars="5"
+            android:layout_centerHorizontal="true"
+            android:progressTint="@color/yellow"/>
+        
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</layout>
