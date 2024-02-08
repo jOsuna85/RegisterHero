@@ -12,11 +12,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         binding.btnSave.setOnClickListener {
-            openDetailActivity()
+            val superHeroName:String = binding.edtxtHeroName.text.toString()
+            val alterEgo:String = binding.edtxtAlterEgo.text.toString()
+            val bio:String = binding.edtxtBioDescription.text.toString()
+            val power: Float = binding.powerbarRating.rating
+            openDetailActivity(superHeroName, alterEgo, bio, power)
         }
     }
 
-    private fun openDetailActivity(){
+    private fun openDetailActivity(superHeroName:String, alterEgo:String, bio:String, power:Float){
         val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("superhero_name",superHeroName)
+        intent.putExtra("alter_ego",alterEgo)
+        intent.putExtra("bio",bio)
+        intent.putExtra("power",power)
+        startActivity(intent)
     }
 }

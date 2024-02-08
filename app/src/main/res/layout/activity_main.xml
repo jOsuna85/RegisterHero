@@ -80,6 +80,7 @@
             android:textColor="@color/black"/>
 
         <RatingBar
+            android:id="@+id/powerbar_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_power_hero"
