@@ -16,10 +16,14 @@ class DetailActivity : AppCompatActivity() {
         val bundle: Bundle = intent.extras!!
         val superHero: SuperHero = bundle.getParcelable(SUPERHERO_KEY)!!
 
+        binding.superhero = superHero
+
+        /*Al utilizar el data binding no podemos ahorrar estas declaraciones y codigos de lineas
+        asignadolos directamente a los views
         binding.txtviewHeroName.text = superHero.name
         binding.txtvName.text = superHero.alterEgo
         binding.txtvBioShort.text = superHero.bio
-        binding.ratingBar.rating = superHero.power
+        binding.ratingBar.rating = superHero.power*/
 
 
     }
