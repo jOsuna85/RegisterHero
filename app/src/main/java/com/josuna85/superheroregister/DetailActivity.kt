@@ -5,21 +5,21 @@ import android.os.Bundle
 import com.josuna85.superheroregister.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
+    companion object{
+        const val SUPERHERO_KEY = "superhero"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val bundle: Bundle = intent.extras!!
-        val superHeroName:String = bundle.getString("superhero_name") ?: ""
-        val alterEgo:String = bundle.getString("alter_ego") ?: ""
-        val bio:String = bundle.getString("bio") ?: ""
-        val power:Float = bundle.getFloat("power")
+        val superHero: SuperHero = bundle.getParcelable(SUPERHERO_KEY)!!
 
-        binding.txtviewHeroName.text = superHeroName
-        binding.txtvName.text = alterEgo
-        binding.txtvBioShort.text = bio
-        binding.ratingBar.rating = power
+        binding.txtviewHeroName.text = superHero.name
+        binding.txtvName.text = superHero.alterEgo
+        binding.txtvBioShort.text = superHero.bio
+        binding.ratingBar.rating = superHero.power
 
 
     }
