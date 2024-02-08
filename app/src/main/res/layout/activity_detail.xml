@@ -27,12 +27,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Iron Man"
+            tools:text="Iron Man"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
         <TextView
             android:id="@+id/txtv_alterego"
@@ -42,10 +42,10 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Alter ego"
-            android:textColor="@color/material_dynamic_neutral_variant50"
+            android:textColor="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtview_hero_name" />
+            app:layout_constraintTop_toBottomOf="@+id/txtview_hero_name"/>
 
         <TextView
             android:id="@+id/txtv_name"
@@ -68,7 +68,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="Bio"
-            android:textColor="@color/material_dynamic_neutral_variant50"
+            android:textColor="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtv_name" />
